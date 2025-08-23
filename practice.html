@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Learning Hub - Master Java Together</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black min-h-screen text-white">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="text-3xl">☕</div>
+                    <h1 class="text-2xl font-bold">Java Learning Hub</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <button
+                        class="hover:text-cyan-300 transition-colors px-4 py-2 rounded-lg hover:bg-white hover:bg-opacity-10"><a
+                            href="index.html">Daily Topics</a></button>
+                    <button class="block w-full text-left px-4 py-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors"><a href="practice.html">Practice</a></button>
+                    <button
+                        class="hover:text-cyan-300 transition-colors px-4 py-2 rounded-lg hover:bg-white hover:bg-opacity-10"><a
+                            href="error.html">Code Space</a></button>
+                </nav>
+                <!-- Mobile menu button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <button
+                    class="block w-full text-left px-4 py-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors"><a
+                        href="index.html">Daily Topics</a></button>
+                <button
+                    class="block w-full text-left px-4 py-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors"><a
+                        href="practice.html">Practice</a></button>
+                <button
+                    class="block w-full text-left px-4 py-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors"><a
+                        href="error.html">Code Space</a></button>
+            </div>
+        </div>
+    </header>
+
+        <!-- Practice Section -->
+        <section id="practice" class="section-content hidden">
+            <div class="glass-card rounded-xl shadow-2xl p-4 sm:p-6 lg:p-8 mb-8 neon-glow">
+                <h2
+                    class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 flex flex-col sm:flex-row items-start sm:items-center text-glow">
+                    <span class="text-3xl sm:text-4xl lg:text-5xl mr-0 sm:mr-3 mb-2 sm:mb-0">💪</span>
+                    Daily Practice Sets
+                </h2>
+
+                <div id="practice-sets" class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                    <div class="glass-card p-4 sm:p-6 rounded-xl card-hover border-l-4 border-orange-400">
+                        <span class="text-sm text-cyan-300 bg-cyan-900 bg-opacity-50 px-2 py-1 rounded">24/8/2025</span>
+                        <h3 class="text-lg sm:text-xl font-semibold text-orange-300 mb-4 text-glow">Basic Syntax
+                            Practice</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-300">1. Hello World Program</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-300">2. Variable Declaration</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-300">3. Basic Calculator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <script src="search.js"></script>
+</body>
+
+</html>

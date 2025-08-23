@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Learning Hub - Master Java Together</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black min-h-screen text-white">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="text-3xl">☕</div>
+                    <h1 class="text-2xl font-bold">Java Learning Hub</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html"
+                        class="hover:text-cyan-300 transition-colors px-4 py-2 rounded-lg hover:bg-white hover:bg-opacity-10">
+                        Daily Topics
+                    </a>
+                    <a href="practice.html"
+                        class="hover:text-cyan-300 transition-colors px-4 py-2 rounded-lg hover:bg-white hover:bg-opacity-10">
+                        Practice
+                    </a>
+                    <a href="error.html"
+                        class="hover:text-cyan-300 transition-colors px-4 py-2 rounded-lg hover:bg-white hover:bg-opacity-10">
+                        Code Space
+                    </a>
+                </nav>
+                <!-- Mobile menu button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="index.html"
+                    class="block w-full text-left px-4 py-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors">
+                    Daily Topics
+                </a>
+                <a href="practice.html"
+                    class="block w-full text-left px-4 py-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors">
+                    Practice
+                </a>
+                <a href="error.html"
+                    class="block w-full text-left px-4 py-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors">
+                    Code Space
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+
+        <!-- Daily Topics Section -->
+        <section id="daily" class="section-content">
+            <div class="glass-card rounded-xl shadow-2xl p-4 sm:p-6 lg:p-8 mb-8 neon-glow">
+                <h2
+                    class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 flex flex-col sm:flex-row items-start sm:items-center text-glow">
+                    <span class="text-3xl sm:text-4xl lg:text-5xl mr-0 sm:mr-3 mb-2 sm:mb-0">📅</span>
+                    Daily Learning Topics
+                </h2>
+
+                <!-- 🔎 Search Bar -->
+                <div class="mb-6">
+                    <input type="text" id="search-bar" placeholder="Search by Day (e.g., Day 1, Day 2...)"
+                        class="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        onkeyup="filterTopics()">
+                </div>
+
+                <div id="daily-topics" class="space-y-4 sm:space-y-6">
+                    <!-- Example Day Card -->
+                    <div class="glass-card p-4 sm:p-6 rounded-xl border-l-4 border-cyan-400 card-hover topic-card">
+                        <div class="flex flex-col sm:flex-row justify-between items-start mb-4">
+                            <h3 class="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-0">Day 1: Java Basics &
+                                Setup</h3>
+                            <span
+                                class="text-sm text-cyan-300 bg-cyan-900 bg-opacity-50 px-2 py-1 rounded">24/8/2025</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                            <div>
+                                <h4 class="font-medium text-cyan-300 mb-3 flex items-center">
+                                    <span class="mr-2">📹</span>Video Resources
+                                </h4>
+                                <ul class="text-sm space-y-2">
+                                    <li><a href="#"
+                                            class="text-blue-400 hover:text-blue-300 hover:underline transition-colors">Java
+                                            Installation Guide</a></li>
+                                    <li><a href="#"
+                                            class="text-blue-400 hover:text-blue-300 hover:underline transition-colors">First
+                                            Java Program</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-cyan-300 mb-3 flex items-center">
+                                    <span class="mr-2">📄</span>Documents
+                                </h4>
+                                <ul class="text-sm space-y-2">
+                                    <li><a href="#"
+                                            class="text-blue-400 hover:text-blue-300 hover:underline transition-colors">Java
+                                            Syntax Cheatsheet</a></li>
+                                    <li><a href="#"
+                                            class="text-blue-400 hover:text-blue-300 hover:underline transition-colors">Setup
+                                            Instructions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example Day 2 -->
+                    <div class="glass-card p-4 sm:p-6 rounded-xl border-l-4 border-cyan-400 card-hover topic-card">
+                        <div class="flex flex-col sm:flex-row justify-between items-start mb-4">
+                            <h3 class="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-0">Day 2: Variables & Data
+                                Types</h3>
+                            <span
+                                class="text-sm text-cyan-300 bg-cyan-900 bg-opacity-50 px-2 py-1 rounded">25/8/2025</span>
+                        </div>
+                        <p class="text-gray-300 text-sm">Covers primitive data types, type casting, and memory basics.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
