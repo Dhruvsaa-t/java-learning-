@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Learning Hub - Master Java Together</title>
+    <title>Java Learning Hub - Code Space</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Prism.js for Java syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-vsc-dark-plus.min.css"
+        rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
 </head>
 
 <body class="bg-black min-h-screen text-white">
@@ -59,28 +65,25 @@
     </header>
 
     <!-- Code Space Section -->
-    <section id="codespace" class="section-content">
-        <div class="glass-card rounded-xl shadow-2xl p-4 sm:p-6 lg:p-8 mb-8 neon-glow">
-            <h2
-                class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 flex flex-col sm:flex-row items-start sm:items-center text-glow">
-                <span class="text-3xl sm:text-4xl lg:text-5xl mr-0 sm:mr-3 mb-2 sm:mb-0">💻</span>
-                Code Space - Error Solve
+    <section id="code-space" class="container mx-auto px-6 py-8">
+        <div class="glass-card rounded-xl shadow-2xl p-6 lg:p-8 neon-glow">
+            <!-- 🔎 Search Bar -->
+            <div class="mb-6">
+                <input type="text" id="search-bar" placeholder="Search by Day (e.g., Day 1, Day 2...)"
+                    class="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                    onkeyup="filterTopics()">
+            </div>
+            <h2 class="text-3xl font-bold mb-6 text-glow flex items-center">
+                <span class="mr-3 text-4xl">💻</span> Code Space – Learn from Errors
             </h2>
 
-            <div id="error-codes" class="space-y-4 sm:space-y-6">
-                <div class="glass-card border-l-4 border-red-400 p-4 sm:p-6 rounded-xl card-hover">
-                    <span class="text-sm text-cyan-300 bg-cyan-900 bg-opacity-50 px-2 py-1 rounded">24/8/2025</span>
-                    <h3 class="text-lg sm:text-xl font-semibold text-red-300 mb-4 text-glow">NullPointerException</h3>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-                        <div>
-                            <h4 class="font-medium text-red-400 mb-3 flex items-center">
-                                <span class="mr-2">❌</span>Error Code:
-                            </h4>
-                            <pre
-                                class="bg-gray-900 text-green-400 p-3 sm:p-4 rounded-lg text-xs sm:text-sm overflow-x-auto border border-gray-700"><code>String name = null;
-System.out.println(name.length()); // Error!</code></pre>
-                        </div>
-                    </div>
+            <!-- Error Example 1 -->
+            <div class="mb-8 topic-card">
+                <p class="text-gray-300 mb-4">Day 1 : </p>
+                <h3 class="text-xl font-semibold text-red-400 mb-2">Challenges Variables & Data Types</h3>
+
+                <div class="bg-[#1e1e1e] rounded-lg overflow-x-auto border border-gray-700">
+                    <pre class="p-4"><code class="language-java">Nothing for today</code></pre>
                 </div>
             </div>
         </div>
