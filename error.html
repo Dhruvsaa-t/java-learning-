@@ -77,6 +77,62 @@
                 <span class="mr-3 text-4xl">💻</span> Code Space – Learn from Errors
             </h2>
 
+             <!-- Error Example 7 -->
+            <div class="mb-8 topic-card">
+                <p class="text-gray-300 mb-4">Day 7 </p>
+                <h3 class="text-xl font-semibold text-red-400 mb-2">class object & constructer</h3>
+
+                <div class="bg-[#1e1e1e] rounded-lg overflow-x-auto border border-gray-700">
+                    <pre class="p-4"><code class="language-java">class BankAccount {
+    int accountNumber;
+    String name;
+    double balance;
+
+    // ❌ Constructor with mistake
+    public void BankAccount(int acc, String n, double b) {
+        accountNumber = acc;
+        name = n;
+        balance = b;
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+        } else {
+            System.out.println("Insufficient Balance!");
+        }
+    }
+
+    public void display() {
+        System.out.println("Account: " + accountNumber);
+        System.out.println("Name: " + name);
+        System.out.println("Balance: " + balance);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // ❌ Constructor call gives error
+        BankAccount acc1 = new BankAccount(101, "Alice", 5000);
+
+        acc1.deposit(2000);
+        acc1.withdraw(1000);
+        acc1.display();
+    }
+}
+//❓ Debugging Tasks
+//Why does new BankAccount(101, "Alice", 5000) give an error?
+//What’s wrong with the constructor definition?
+//Fix the constructor so that the program runs and outputs correct account details.
+</code></pre>
+                </div>
+            </div>
+
+
             <!-- Error Example 5 -->
             <div class="mb-8 topic-card">
                 <p class="text-gray-300 mb-4">Day 5 </p>
@@ -238,6 +294,7 @@ public class Main {
 </body>
 
 </html>
+
 
 
 
